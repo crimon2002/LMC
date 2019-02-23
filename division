@@ -1,0 +1,24 @@
+        inp
+        sta n1
+        inp
+        sta n2
+loop    lda n1
+        sub n2
+        sta n1
+        lda ris
+        add one
+        sta ris
+        lda n1
+        sta res
+        brp loop
+        lda ris
+        sub one
+        out
+        lda res
+        add n2
+        out
+n1      dat 0
+n2      dat 0
+res     dat 0
+ris     dat 0
+one     dat 1
